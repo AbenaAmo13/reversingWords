@@ -5,22 +5,21 @@ import java.util.*;
 public class Main {
     public String breakDownWordReverse(String word) {
         StringBuilder sortedWord = new StringBuilder();
-        String reverseWord = null;
+        String reverseWord = "";
         List sortWord = new ArrayList();
         String[] splitWord = word.split("");
         sortWord = Arrays.asList(splitWord);
         Collections.reverse(sortWord);
-        for (Object letter : sortWord) {
+        for (Object letter : sortWord){
             sortedWord.append(letter);
         }
-        System.out.println(sortedWord.toString());
         return sortedWord.toString();
     }
 
     public String spinWords(String sentence) {
         //TODO: Code stuff here
         StringBuilder finalSentence = new StringBuilder();
-        String finalWord = null;
+        String finalWord = "";
         String[] words = sentence.split(" ");
         for (String word : words) {
             if (word.length() > 4) {
@@ -29,10 +28,10 @@ public class Main {
                 finalSentence.append(word + " ");
             }
         }
-        finalWord = finalSentence.toString();
+        finalWord = finalSentence.toString().trim();
+        System.out.println(finalWord);
         return finalWord;
     }
-
     public static void main(String[] args) {
         // write your code here
         Scanner scanner = new Scanner(System.in);
